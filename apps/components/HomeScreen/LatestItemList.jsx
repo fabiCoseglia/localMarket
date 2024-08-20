@@ -1,10 +1,20 @@
-import { View, Text } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import PostItem from './PostItem'
 
-export default function LatestItemList() {
+export default function LatestItemList({latestItemList,heading}) {
   return (
-    <View>
-      <Text>LatestItemList</Text>
+    <View className="mt-3 mb-[50px]">
+      <Text className="font-bold text-[20px]">{heading}</Text>
+      <FlatList
+      className='mt-2'
+      data={latestItemList}
+      numColumns={2}
+      renderItem={({item,index})=>(
+      <PostItem item={item} />
+      )}
+      />
     </View>
+    
   )
 }
