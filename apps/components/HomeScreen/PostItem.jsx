@@ -6,7 +6,7 @@ export default function PostItem({item}) {
     const navigation = useNavigation()
   return (
     <TouchableOpacity
-    className='flex-1 m-1 border-[1px] rounded-lg p-2 border-slate-300'
+    className='flex-1 m-1 border-[1px] rounded-lg p-2 border-slate-300 bg-white'
     onPress={()=>{navigation.push('product-detail',{
       product:item
     })}}
