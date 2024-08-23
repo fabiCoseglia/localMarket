@@ -1,13 +1,11 @@
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../Screens/HomeScreen';
-import ExploreScreen from '../Screens/ExploreScreen';
 import AddPostScreen from '../Screens/AddPostScreen';
-import ProfileScreen from '../Screens/ProfileScreen';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import HomeScreenStackNav from './HomeScreenStackNav';
 import ExploreScreenNavigation from './ExploreScreenNavigation';
+import ProfileScreenStackNav from './ProfileScreenStackNav';
 export default function TabNavigation() {
     const Tab = createBottomTabNavigator();
 
@@ -39,7 +37,7 @@ export default function TabNavigation() {
         tabBarIcon: ({color,size})=>
           <FontAwesome name="camera" size={size} color={color} />
       }} />
-      <Tab.Screen name="profile" component={ProfileScreen}
+      <Tab.Screen name="profile" component={ProfileScreenStackNav}
        options={{
         tabBarLabel: ({ color }) => 
           <Text style={{ color }}>Profile</Text>,
