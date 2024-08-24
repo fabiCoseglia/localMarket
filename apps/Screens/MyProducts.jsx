@@ -32,8 +32,8 @@ export default function MyProducts() {
   }
 
   return (
-    <ScrollView>
+    <View className='mb-8'>
       <LatestItemList latestItemList={productList}  />
-    </ScrollView>
+    </View>
   )
 }

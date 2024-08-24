@@ -21,11 +21,9 @@ export default function ExploreScreen() {
     })
   }
   return (
-    <View className='p-5 py-8'>
-      <ScrollView>
+    <View className='p-5 py-4 mb-[85px]'>
       <Text className='text-[30px] font-bold'>Explore more</Text>
       <LatestItemList latestItemList={productList} />
-      </ScrollView>
     </View>
   )
 }

@@ -32,7 +32,7 @@ export default function ItemList() {
         <ActivityIndicator size={'large'} color={'blue'} className='justify-center mt-32' />
         :
         itemList?.length >0?
-        <LatestItemList className='mt-2' latestItemList={itemList} heading={'Latest post'} />
+        <LatestItemList className='mt-2' latestItemList={itemList} heading={'Latest post'} disableScroll={true} />
         :
         <Text className='text-center items-center p-5 text-[20px] text-gray-500'>Items not found</Text>
       }    
